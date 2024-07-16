@@ -1,0 +1,91 @@
+<footer>
+  <div class="conteiner-fluid px-4">
+    <div class="text-center py-5">
+      <div>
+        <div>
+          <h1 class="text-primary display-5">Reservasi Tempat</h1>
+          <div class="text-white fs-4 lead">
+            Pesan tempat duduk Anda sekarang untuk menghindari antrian.
+          </div>
+        </div>
+
+        <form class="mt-5 px-5" action="#">
+          <!-- Input Tanggal Reservasi -->
+          <div class="row row-cols-1 row-cols-md-3 g-3">
+            <div class="col mb-3 text-start">
+              <label for="reservation-date" class="form-label text-secondary"
+                >Tanggal Reservasi</label
+              >
+              <input
+                type="date"
+                class="form-control"
+                id="reservation-date"
+                name="reservation-date"
+                required
+              />
+            </div>
+
+            <!-- Input Jumlah Orang -->
+            <div class="col mb-3 text-start">
+              <label for="number-of-people" class="form-label text-secondary"
+                >Jumlah Orang</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="number-of-people"
+                name="number-of-people"
+                min="1"
+                required
+              />
+            </div>
+
+            <!-- Input Waktu Reservasi -->
+            <div class="col mb-3 text-start">
+              <label for="reservation-time" class="form-label text-secondary"
+                >Waktu Reservasi</label
+              >
+              <input
+                type="time"
+                class="form-control"
+                id="reservation-time"
+                name="reservation-time"
+                required
+              />
+            </div>
+          </div>
+          <!-- Tombol Kirim -->
+          <div class="mt-4">
+            <button type="submit" class="btn fs-4 btn-primary text-white"
+              >Kirim Reservasi</button
+            >
+          </div>
+        </form>
+      </div>
+      <div class="mt-5">Copyright ©2022. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+<style>
+  footer {
+    background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.7),
+        var(--background) 70%
+      ),
+      url("../assets/footer.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .btn {
+    border-radius: 0;
+  }
+  input,
+  input:active,
+  input:focus {
+    border-radius: 0;
+    color: var(--secondary);
+    background-color: white;
+  }
+</style>

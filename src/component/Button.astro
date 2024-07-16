@@ -1,0 +1,17 @@
+<button>
+  <slot />
+</button>
+<style lang="scss">
+  button {
+    padding: 4px 8px;
+    background-color: var(--primary);
+    color: var(--text);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--secondary);
+    }
+  }
+</style>

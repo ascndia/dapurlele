@@ -1,0 +1,116 @@
+---
+import NavbarItem from "./NavbarItem.astro";
+---
+
+<nav class="navbar navbar-dark navbar-expand-md fixed-top py-3">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <div class="fw-bold text-uppercase text-white fs-5">
+        Dapur<span class="text-primary fst-italic">Lele</span>
+      </div>
+    </a>
+    <button
+      class="btn d-block d-md-none btn-primary ms-auto me-3 text-white fw-semibold"
+      >Reservasi</button
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbar3"
+      aria-controls="navbar3"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span style="color: white;" class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar3">
+      <div class="navbar-content">
+        <ul class="navbar-nav ms-auto">
+          <NavbarItem href="#home" title="Home" />
+          <NavbarItem href="#about" title="Tentang Kami" />
+          <NavbarItem href="#speciality" title="Spesial Kami" />
+          <NavbarItem href="#menu" title="Menu" />
+          <button
+            class="btn d-none d-md-block btn-primary ms-2 text-white fw-semibold"
+            >Reservasi</button
+          >
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<style>
+  .navbar {
+    transition: 500ms;
+    /* background: linear-gradient(
+      to left,
+      var(--background-secondary),
+      var(--background) 70%
+    ); */
+    /* From https://css.glass */
+    background: linear-gradient(
+      to left,
+      var(--background-secondary),
+      var(--background) 70%
+    );
+    opacity: 0.9;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+  }
+  .navbar-brand {
+    letter-spacing: 0.5px;
+    color: var(--text);
+    transition: 500ms;
+  }
+  .navbar-brand:hover {
+    color: var(--primary) !important;
+  }
+  .navbar-toggler {
+    z-index: 50;
+    padding: 4px 8px;
+  }
+
+  .navbar-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (max-width: 768px) {
+    .navbar-content {
+      height: 100vh;
+      padding-top: 16px;
+      flex-direction: column;
+      width: 100%;
+      justify-content: start;
+      transition: all 0.4s;
+      background: inherit;
+    }
+    .navbar-nav {
+      width: 100%;
+    }
+  }
+  .scrolled {
+    opacity: 1;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    border-bottom: 1px solid rgb(36, 36, 36);
+  }
+</style>
+<script>
+  import $ from "jquery";
+  $(document).ready(function () {
+    function updateScrollPosition() {
+      const scrollTop = $(document).scrollTop()!;
+      if (scrollTop > 76) {
+        $(".navbar").addClass("scrolled");
+      } else {
+        $(".navbar").removeClass("scrolled");
+      }
+    }
+    updateScrollPosition();
+    $(window).on("scroll", updateScrollPosition);
+  });
+</script>

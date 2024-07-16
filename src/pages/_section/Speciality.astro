@@ -1,0 +1,82 @@
+---
+import Img from "../../assets/special-card.jpg";
+import { Image } from "astro:assets";
+---
+
+<section id="speciality">
+  <div class="container-fluid py-5 px-4">
+    <div class="content text-center">
+      <div>
+        <h1 class="text-primary display-5 fw-semibold">Menu kebanggan kami</h1>
+        <div class="text-white fs-4 lead w-75 mx-auto">
+          Setiap menu kami dibuat dengan bahan-bahan berkualitas tinggi dan
+          resep tradisional yang otentik. Berikut adalah beberapa hidangan yang
+          kami sediakan
+        </div>
+      </div>
+      <div class="row px-5 mt-4 g-3 row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <div class="col">
+          <div class="card bg-white p-2 text-center rounded-0 border-0">
+            <div>
+              <Image
+                style="aspect-ratio: 1/1"
+                class={"w-100  h-auto"}
+                src={Img}
+                alt={"speciality"}
+              />
+            </div>
+            <div class="text-black lead mt-2">Sate Kambing - Rp. 20.000</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card bg-white p-2 text-center rounded-0 border-0">
+            <div>
+              <Image
+                style="aspect-ratio: 1/1"
+                class={"w-100  h-auto"}
+                src={Img}
+                alt={"speciality"}
+              />
+            </div>
+            <div class="text-black lead mt-2">Sate Kambing - Rp. 20.000</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card bg-white p-2 text-center rounded-0 border-0">
+            <div>
+              <Image
+                style="aspect-ratio: 1/1"
+                class={"w-100  h-auto"}
+                src={Img}
+                alt={"speciality"}
+              />
+            </div>
+            <div class="text-black lead mt-2">Sate Kambing - Rp. 20.000</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card bg-white p-2 text-center rounded-0 border-0">
+            <div>
+              <Image
+                style="aspect-ratio: 1/1"
+                class={"w-100  h-auto"}
+                src={Img}
+                alt={"speciality"}
+              />
+            </div>
+            <div class="text-black lead mt-2">Sate Kambing - Rp. 20.000</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  section {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../../assets/special.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
